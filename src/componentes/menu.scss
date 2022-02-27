@@ -1,0 +1,87 @@
+.header__desktop--logo{
+    display:none;
+
+}
+.nav {
+    .nav__icon--menuButton {
+        margin: 4.84% 0 0 7.5%;
+    }
+    .nav__unfolded--icon {
+        margin: 4.84% 0 0 7.5%;
+    }
+    /* unfolded div menu*/
+    .nav__unfolded {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        height: 100%;
+        width: 100vw;
+        background-color: #fafafa;
+        transform: translate(-100%);
+        transition-duration: 0.4s;
+        .nav__unfolded--text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Oswald", sans-serif;
+            color: #6904a0;
+            height: 91px;
+        }
+        .nav__links {
+            display: flex;
+            border-bottom: solid 0.5px white;
+            width: 100vw;
+            height: 14.84%;
+            justify-content: center;
+            align-items: center;
+            background-color: #6904a0;
+            font-family: "Oswald", sans-serif;
+            text-decoration: none;
+            font-weight: 700;
+            color: white;
+        }
+    }
+}
+/*hide the nav for desktop display*/
+.nav__links--desktop {
+    position: absolute;
+    transform: translateX(-110%);
+}
+
+@media (min-width: 1200px) {
+    .nav {
+        position: absolute;
+        transform: translateX(-110%);
+    }
+    .nav__desktop {
+        border-bottom: solid 0.5px yellow;
+        height: 16vh;
+        display: flex;
+        align-items: center;
+
+        .header__desktop--logo {
+            display: none;
+            display: flex;
+            align-items: center;
+            margin-left: 6.95vw;
+            width: 35vw;
+            padding-left: 2.1vw;
+        }
+        .nav__desktop--container {
+            width: 50.1vw;
+            display: inherit;
+            align-items: flex-end;
+            justify-content: flex-end;
+            margin-left: 2.7vw
+        }
+    }
+    .nav__links {
+        font-family: "Raleway", sans-serif;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+    .nav__links--desktop {
+        position: relative;
+        transform: translateX(0);
+    }
+}

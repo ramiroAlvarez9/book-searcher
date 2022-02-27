@@ -1,0 +1,128 @@
+$font-color: #6904a0;
+
+.section__gallery--showing--the--book {
+    position: fixed;
+    top: -0.83%;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    //max-width: 1920;
+    //max-height: 1080px;
+
+    .section__gallery--showing--the--book--container {
+        margin-top: 7.5%;
+        margin-left: 9.1%;
+        margin-bottom: 0%;
+        display: inherit;
+        flex-direction: row;
+        height: 40vh;
+        max-width: 1516px;
+
+        .section__gallery--showing--the--book--img {
+            width: 111px;
+            height: 168px;
+            border-radius: 27px;
+            //max-width: 153px;
+        }
+        .section__gallery--showing--the--book--container--img--buttons-titles {
+            width: 90vw;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50%;
+            gap: 0% 0%;
+            grid-template-areas: ". .";
+            margin-top: 7.5%;
+            max-width: 594px;
+
+            #buttons {
+                display: grid;
+                grid-auto-columns: 1fr;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 50% 50%;
+                gap: 0% 1%;
+                grid-template-areas:
+                    ". ."
+                    ". .";
+                margin-top: 7.5%;
+                max-width: 1000px;
+                //margin-left: 5%;
+
+                button[type="button"] {
+                    background-color: white;
+                    font-size: 50%;
+                    border: solid 0.5px $font-color;
+                    border-radius: 2px;
+                    margin: 7.5% 10% 0 0;
+                    width: 18vw;
+                    color: $font-color;
+                }
+            }
+
+            .section__gallery--showing--the--book--container--titles {
+                width: 40vw;
+                height: 40vh;
+            }
+        }
+    }
+
+    .section__gallery--showing--the--book--sub--synopsys--container {
+        //border: solid;
+        margin-top: 10%;
+        margin-left: 9.1%;
+    }
+    .section__gallery--showing--the--book--title {
+        font-family: "Oswald", sans-serif;
+        margin-bottom: 10%;
+        font-size: 18px;
+        width: 50vw;
+        color: $font-color;
+    }
+    .section__gallery--showing--the--book--sub--title {
+        font-family: "Oswald", sans-serif;
+        font-size: 14px;
+        color: $font-color;
+    }
+    .section__gallery--showing--the--book--sub--synopsys--container--h4 {
+        font-family: "Oswald", sans-serif;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        color: $font-color;
+    }
+    .section__gallery--showing--the--book--sub--synopsys--container--p {
+        font-family: "Raleway", sans-serif;
+        color: $font-color;
+        font-weight: 500;
+        width: 70vw;
+    }
+}
+@media (min-width: 768px) {
+    .section__gallery--showing--the--book {
+        .section__gallery--showing--the--book--sub--synopsys--container {
+            margin-top: -5%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .section__gallery--showing--the--book {
+        .section__gallery--showing--the--book--title {
+            font-size: 32px;
+        }
+
+        .section__gallery--showing--the--book--sub--title {
+            font-size: 16px;
+        }
+        .section__gallery--showing--the--book--sub--synopsys--container {
+            margin-top: 15%;
+        }
+    }
+
+    .section__gallery--showing--the--book--sub--synopsys--container--h4 {
+        font-size: 2vw;
+    }
+    .section__gallery--showing--the--book--sub--synopsys--container--p {
+        font-size: 2vw;
+    }
+}
