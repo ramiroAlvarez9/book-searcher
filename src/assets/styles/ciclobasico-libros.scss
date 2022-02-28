@@ -1,10 +1,5 @@
 $font-color: #6904a0;
-@media (max-width: 361px) {
-    .section__gallery--container--title {
-        font-size: 20px;
-        
-    }
-}
+
 #basicCicleBooks {
     width: 80vw;
     margin-left: 8.5vw;
@@ -42,13 +37,12 @@ $font-color: #6904a0;
         display: grid;
         grid-template-columns: 40% 40%;
         grid-template-rows: 1fr 1fr;
-        gap: 5% 20%;
+        gap: 3% 10%;
         grid-template-areas:
             ". ."
             ". .";
-        img[alt = "loading screen"]{
+        img[alt="loading screen"] {
             grid-column: 2/3;
-
         }
         .section__gallery--container {
             display: flex;
@@ -60,13 +54,18 @@ $font-color: #6904a0;
             border-left: solid 0.5px #c4c800;
 
             .section__gallery--container--img {
-                width: 111px;
-                height: 168px;
+                width: 37.83vw;
+                height: 23.25vh;
+                max-width:111px;
+                max-height: 168px;
+                //margin-left:5vw;
+                
+                
                 border-radius: 27px;
             }
             .section__gallery--container--title {
                 font-family: "Raleway", sans-serif;
-                font-size: 1.5vw;
+                font-size: 2vw;
                 color: $font-color;
                 margin-top: 10px;
                 text-transform: uppercase;
@@ -108,7 +107,7 @@ $font-color: #6904a0;
             display: grid;
             grid-template-columns: 33% 33% 33%;
             grid-template-rows: 25% 25% 25% 25%;
-            gap: 15% 5%;
+            gap: 40% 5%;
             grid-template-areas:
                 ". ."
                 ". .";
@@ -121,9 +120,8 @@ $font-color: #6904a0;
                 .section__gallery--container--title {
                     font-size: 1vw;
                     margin-top: 3%;
-
                 }
-                .section__gallery--container--link{
+                .section__gallery--container--link {
                     margin-top: 3%;
                     font-size: 20px;
                 }

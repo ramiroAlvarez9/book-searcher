@@ -1,5 +1,5 @@
 import React from 'react';
-import '../pagina-de-inicio-escritorio'
+import '../assets/styles/pagina-de-inicio-mobile.scss'
 
 const WelcomePageMobile = () => {
     return (

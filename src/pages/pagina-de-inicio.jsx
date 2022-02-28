@@ -1,22 +1,15 @@
 import React from 'react';
-import { Icon } from '@iconify/react';
-import WelcomePageMobile from '../componentes/componentes - mobile/pagina-de-inicio-mobile'
-import WelcomePageDesktop from '../componentes/pagina-de-inicio-escritorio';
+import WelcomePageMobile from '../components/Pagina-de-inicio-mobile'
+import WelcomePageDesktop from '../components/Pagina-de-inicio-escritorio';
 
-const Welcomepage = () => {
+const WelcomePage = () => {
     return (
         <>
-
             <WelcomePageMobile />
-
             <WelcomePageDesktop />
-
-
         </>
-
-
 
     );
 }
 
-export default Welcomepage;
+export default WelcomePage;

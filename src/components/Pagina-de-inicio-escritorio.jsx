@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-import './pagina-de-inicio-escritorio.scss'
+import '../assets/styles/pagina-de-inicio-escritorio.scss';
 import {Link} from 'react-router-dom';
 
 const PaginaDeInicioEscritorio = () => {

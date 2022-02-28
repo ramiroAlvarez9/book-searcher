@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-import './ver-mas.scss'
+import '../assets/styles/ver-mas.scss';
 
 
 const VerMas = ({ dynamicShowingBook, dynamicHiddingBook, titulo, autor, imagen, sinopsis}) => {

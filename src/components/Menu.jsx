@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
-import './menu.scss';
+import '../assets/styles/menu.scss';
+import Img from "react-cool-img";
 
 const Menu = () => {
 
@@ -44,9 +45,9 @@ const Menu = () => {
                         </div>
 
                         <Link to="/ciclobasico" className='nav__links' onClick={closeMenu}>CICLO BÁSICO</Link>
-                        <Link to="/ciclo2" className='nav__links' onClick={closeMenu}>CICLO ESÓTERICO</Link>
-                        <Link to="/ciclo3" className='nav__links' onClick={closeMenu}>CICLO DIVERSIFICADO</Link>
-                        <Link to="/ciclo4" className='nav__links' onClick={closeMenu}>CICLO METAFÍSICA CRISTIANA</Link>
+                        <Link to="/cicloesoterico" className='nav__links' onClick={closeMenu}>CICLO ESÓTERICO</Link>
+                        <Link to="/ciclodiversificado" className='nav__links' onClick={closeMenu}>CICLO DIVERSIFICADO</Link>
+                        <Link to="/ciclometafisica-cristiana" className='nav__links' onClick={closeMenu}>CICLO METAFÍSICA CRISTIANA</Link>
 
                     </div>
 
@@ -62,14 +63,21 @@ const Menu = () => {
 
                 <nav className="nav__desktop">
                     <div className="header__desktop--logo">
-                        <h1>LOGO</h1>
+                        <Link to='/'>
+                            <Img
+                                className="header__desktop--logo--image"
+                                src='https://static.wixstatic.com/media/a5d133_9c07b552e80148bcbac31c97c763d9eb~mv2.jpg/v1/fit/w_960%2Ch_960%2Cal_c%2Cq_80/file.jpg'
+                                alt="REACT COOL IMG"
+                            />
+                        </Link>
+
 
                     </div>
                     <div className="nav__desktop--container">
                         <Link to="/ciclobasico" className='nav__links nav__links--desktop'>CICLO BÁSICO</Link>
-                        <Link to="/ciclo2" className='nav__links nav__links--desktop' >CICLO ESÓTERICO</Link>
-                        <Link to="/ciclo3" className='nav__links nav__links--desktop' >CICLO DIVERSIFICADO</Link>
-                        <Link to="/ciclo4" className='nav__links nav__links--desktop' >CICLO METAFÍSICA CRISTIANA</Link>
+                        <Link to="/cicloesoterico" className='nav__links nav__links--desktop' >CICLO ESÓTERICO</Link>
+                        <Link to="/ciclodiversificado" className='nav__links nav__links--desktop' >CICLO DIVERSIFICADO</Link>
+                        <Link to="/ciclometafisica-cristiana" className='nav__links nav__links--desktop' >CICLO METAFÍSICA CRISTIANA</Link>
                     </div>
                 </nav>
             </header>
