@@ -1,0 +1,131 @@
+.header__desktop--logo {
+  display: none;
+}
+
+.nav {
+  /* unfolded div menu*/
+}
+
+.nav .nav__icon--menuButton {
+  margin: 4.84% 0 0 7.5%;
+}
+
+.nav .nav__unfolded--icon {
+  margin: 4.84% 0 0 7.5%;
+}
+
+.nav .nav__unfolded {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: #fafafa;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.nav .nav__unfolded .nav__unfolded--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Oswald", sans-serif;
+  color: #6904a0;
+  height: 91px;
+}
+
+.nav .nav__unfolded .nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 0.5px white;
+  width: 100vw;
+  height: 14.84%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #6904a0;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  font-weight: 900;
+  color: white;
+}
+
+/*hide the nav for desktop display*/
+.nav__links--desktop {
+  position: absolute;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    position: absolute;
+    -webkit-transform: translateX(-110%);
+            transform: translateX(-110%);
+  }
+  .nav__desktop {
+    border-bottom: solid 0.5px yellow;
+    height: 16vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__desktop .header__desktop--logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin-left: 6.95vw;
+    width: 35vw;
+    height: 100%;
+    padding-left: 2.1vw;
+  }
+  .nav__desktop .header__desktop--logo .header__desktop--logo--image {
+    margin-left: -36.0px;
+    width: 100px;
+    height: 100px;
+  }
+  .nav__desktop .nav__desktop--container {
+    width: 50.1vw;
+    display: inherit;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-left: 2.7vw;
+  }
+  .nav__links {
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 700;
+  }
+  .nav__links--desktop {
+    position: relative;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=menu.css.map */

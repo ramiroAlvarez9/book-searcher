@@ -13,20 +13,22 @@ const CicloBasicoLibros = () => {
     //data to hide or show the book info
     const [dynamicShowingBook, setDynamicShowingBook] = useState('-110%');
     //data to the books, from the API
-    const [booksData, setBooksData] = useState();
+    const [booksData, setBooksData] = useState([]);
     //data for 'VER MAS'
     const [booksDataKey, setBooksDataKey] = useState(0);
+
+
     //data from the input
     const [searchTerm, setSearchTerm] = useState('');
 
     //animation to show the book info
     const showTheBooks = () => setDynamicShowingBook('0%');
-    
+
     //animation to hide the book info
     const dynamicHiddingBook = () => setDynamicShowingBook('-110%');
 
     const fetchTheBookApi = async () => {
-        const api = await fetch('http://localhost:1337/api/libros');
+        const api = await fetch('http://localhost:1337/api/ciclometafisica-cristiana-libros');
         const books = await api.json();
         setBooksData(books.data)
     };
@@ -34,30 +36,28 @@ const CicloBasicoLibros = () => {
     useEffect(() => {
 
         fetchTheBookApi();
-    
+
+
+
     }, []);
-
-
 
     return (
 
         <>
             <section id="basicCicleBooks">
 
-                <input type="text" placeholder="Buscar por titulo" onChange={ e => {
-                    
+                <input type="text" placeholder="Buscar por titulo" onChange={e => {
+
                     setSearchTerm(e.target.value)
-                
                 }}
 
-
                 />
-
                 <div className="section__buttons">
 
                     <button type="button">MOSTRAR SOLO DISPONIBLES</button>
 
                 </div>
+
 
                 <section className="section__gallery">
 
@@ -67,59 +67,104 @@ const CicloBasicoLibros = () => {
                             <>
 
                                 <img src="https://c.tenor.com/Tu0MCmJ4TJUAAAAC/load-loading.gif" alt="loading screen" />
-                            
+
                             </>
 
                             :
 
                             //when the data it's available
 
-                            booksData.filter((val,key)=>{
-                            
-                                if(searchTerm === ''){
-                                    return booksData;
-                                   
-                                   
-                                } else if(booksData[key].attributes.titulo.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
-                                    return booksData;
+                            booksData.filter((val, key) => {
+                                if (searchTerm === '') {
+                                    return val;
+
+
+                                } else if (booksData[key].attributes.titulo.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                                    return val;
                                 }
-                            })
-                            .map((val, key) => {
 
-                                //console.log(booksData[booksDataKey].attributes.titulo)
+                            }).map((val, key) => {
 
-                                return <>
-                                    <div className='section__gallery--container'>
+                                if (val.id === parseInt(booksDataKey)) {
 
-                                        <Img
-                                            onClick={showTheBooks}
-                                            className="section__gallery--container--img"
-                                            src={val.attributes.imagen}
-                                            alt="REACT COOL IMG"
+                                
+
+                                    return <>
+
+                                        <div className='section__gallery--container'>
+                                            <Link className="section__gallery--container--link" to='' onClick={() => setBooksDataKey(`${val.id}`)}>
+                                                <Img
+                                                    onClick={showTheBooks}
+                                                    className="section__gallery--container--img"
+                                                    src={val.attributes.imagen}
+                                                    alt="REACT COOL IMG"
+                                                />
+                                            </Link>
+
+
+                                            <h3 className="section__gallery--container--title">{val.attributes.titulo}</h3>
+
+                                            <Link className="section__gallery--container--link" to='' onClick={() => setBooksDataKey(`${val.id}`)}>
+
+                                                <span onClick={showTheBooks} className="section__gallery--container--link">VER MÁS</span>
+
+                                            </Link>
+
+
+                                        </div>
+
+
+
+                                        <VerMas
+
+                                            dynamicShowingBook={dynamicShowingBook}
+                                            dynamicHiddingBook={dynamicHiddingBook}
+                                            titulo={val.attributes.titulo}
+                                            autor={val.attributes.autor}
+                                            imagen={val.attributes.imagen}
+                                            sinopsis={val.attributes.sinopsis}
                                         />
+                                    </>
+
+
+                                }
+                                {/* */ }
+                                return <>
+
+                                    <div className='section__gallery--container'>
+                                        <Link className="section__gallery--container--link" to='' onClick={() => setBooksDataKey(`${val.id}`)}>
+                                            <Img
+                                                onClick={showTheBooks}
+                                                className="section__gallery--container--img"
+                                                src={val.attributes.imagen}
+                                                alt="REACT COOL IMG"
+                                            />
+                                        </Link>
 
                                         <h3 className="section__gallery--container--title">{val.attributes.titulo}</h3>
 
-                                        <Link className="section__gallery--container--link" to='' onClick={() => setBooksDataKey(`${key}`)}>
+                                        <Link className="section__gallery--container--link" to='' onClick={() => setBooksDataKey(`${val.id}`)}>
 
                                             <span onClick={showTheBooks} className="section__gallery--container--link">VER MÁS</span>
 
                                         </Link>
 
+                                        {/* 
                                         <VerMas
+
                                             dynamicShowingBook={dynamicShowingBook}
                                             dynamicHiddingBook={dynamicHiddingBook}
-                                            titulo={booksData[booksDataKey].attributes.titulo}
-                                            autor={booksData[booksDataKey].attributes.autor}
-                                            imagen={booksData[booksDataKey].attributes.imagen}
-                                            sinopsis={booksData[booksDataKey].attributes.sinopsis}
+                                            titulo={val.attributes.titulo}
+                                            autor={val.attributes.autor}
+                                            imagen={val.attributes.imagen}
+                                            sinopsis={val.attributes.sinopsis}
                                         />
+                                    */}
 
                                     </div>
                                 </>
                             })
                     }
-
                 </section>
             </section>
         </>

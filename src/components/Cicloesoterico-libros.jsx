@@ -28,7 +28,7 @@ const CicloBasicoLibros = () => {
     const dynamicHiddingBook = () => setDynamicShowingBook('-110%');
 
     const fetchTheBookApi = async () => {
-        const api = await fetch('http://localhost:1337/api/ciclodiversificado-libros');
+        const api = await fetch('http://localhost:1337/api/cicloesoterico-libros');
         const books = await api.json();
         setBooksData(books.data)
     };
@@ -87,7 +87,7 @@ const CicloBasicoLibros = () => {
 
                                 if (val.id === parseInt(booksDataKey)) {
 
-                                   
+
 
                                     return <>
 
