@@ -19,13 +19,25 @@
         background-color: #fafafa;
         transform: translate(-100%);
         transition-duration: 0.4s;
-        .nav__unfolded--text {
+        .nav__unfolded--text--logo {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             font-family: "Oswald", sans-serif;
             color: #6904a0;
             height: 91px;
+        }
+        .nav__unfolded--text--logo--img{
+            display: block;
+            height: 50px;
+            width: 50px;
+            margin-bottom: 2vh;
+
+        }
+        .nav__unfolded--text--logo--h2{
+            margin-bottom: 2vh;
+
         }
         .nav__links {
             display: flex;

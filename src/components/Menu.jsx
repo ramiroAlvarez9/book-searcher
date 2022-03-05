@@ -38,8 +38,18 @@ const Menu = () => {
                         <div className="nav__unfolded--icon">
                             <Icon icon="ant-design:close-square-filled" color="#0f0333" width="56" height="50" className="nav__div--icon" onClick={closeMenu} />
                         </div>
-                        <div className="nav__unfolded--text">
-                            <h2 >
+                        <div className="nav__unfolded--text--logo">
+                            <Link to='/' className="nav__unfolded--text--logo--img">
+                                <Img
+
+                                    onClick={closeMenu}
+                                    className="nav__unfolded--text--logo--img"
+                                    src='https://static.wixstatic.com/media/a5d133_9c07b552e80148bcbac31c97c763d9eb~mv2.jpg/v1/fit/w_960%2Ch_960%2Cal_c%2Cq_80/file.jpg'
+                                    alt="REACT COOL IMG"
+                                />
+                            </Link>
+
+                            <h2 className="nav__unfolded--text--logo--h2" >
                                 Buscar por ciclo o catedra
                             </h2>
                         </div>

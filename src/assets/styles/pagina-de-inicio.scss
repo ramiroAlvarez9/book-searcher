@@ -14,7 +14,42 @@ $font-color: #6904a0;
     width: 250px;
 }
 
+#section__mobile {
+    margin-left: 9.5vw;
+    margin-top: 9.22vh;
+    width: 65vw;
+    //border: solid 0.5px black;
+    .title__mobile {
+        font-family: "Oswald", sans-serif;
+        color: $font-color;
+        font-size: 40px;
+    }
+    .title__mobile--p {
+        font-family: "Raleway", sans-serif;
+        color: $font-color;
+        font-size: 15vw;
+        margin-top: 15px;
+        font-weight: 500;
+    }
+    .title__mobile--button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 0.5px yellow;
+        font-family: "Oswald", sans-serif;
+        margin-top: 3vh;
+        width: 40vw;
+        height: 5vh;
+        font-size: 4vw;
+        text-decoration: none;
+    }
+}
+
 @media (min-width: 1200px) {
+    #section__mobile {
+        position:absolute;
+        transform: translateX(-999%);
+    }
     #section__desktop {
         transform: translateX(0%);
         width: 47.8vw;

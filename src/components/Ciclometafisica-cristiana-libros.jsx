@@ -28,7 +28,7 @@ const CicloBasicoLibros = () => {
     const dynamicHiddingBook = () => setDynamicShowingBook('-110%');
 
     const fetchTheBookApi = async () => {
-        const api = await fetch('http://localhost:1337/api/ciclometafisica-cristiana-libros');
+        const api = await fetch('https://metafisica-libros.herokuapp.com/api/ciclometafisica-cristiana-libros');
         const books = await api.json();
         setBooksData(books.data)
     };

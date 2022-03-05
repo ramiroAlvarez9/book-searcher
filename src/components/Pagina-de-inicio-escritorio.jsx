@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-import '../assets/styles/pagina-de-inicio-escritorio.scss';
+import '../assets/styles/pagina-de-inicio.scss';
 import {Link} from 'react-router-dom';
 
 const PaginaDeInicioEscritorio = () => {
@@ -10,7 +10,7 @@ const PaginaDeInicioEscritorio = () => {
                 <h1 className="title__desktop">BIENVENIDO</h1>
                 <p className="title__desktop--p">al buscador de libros de la enseñanza espiritual metafísica</p>
                 <Link to = '/ciclobasico'className='title__desktop--button'>
-                    Empieza aqui
+                    Empieza aquí
                 </Link>
 
 
