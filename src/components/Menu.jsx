@@ -4,6 +4,7 @@ import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/menu.scss';
 import Img from "react-cool-img";
+import Logo from '../assets/BL.png';
 
 const Menu = () => {
 
@@ -44,8 +45,8 @@ const Menu = () => {
 
                                     onClick={closeMenu}
                                     className="nav__unfolded--text--logo--img"
-                                    src='https://static.wixstatic.com/media/a5d133_9c07b552e80148bcbac31c97c763d9eb~mv2.jpg/v1/fit/w_960%2Ch_960%2Cal_c%2Cq_80/file.jpg'
-                                    alt="REACT COOL IMG"
+                                    src= {Logo}
+                                    alt="Logo"
                                 />
                             </Link>
 
@@ -54,11 +55,8 @@ const Menu = () => {
                             </h2>
                         </div>
 
-                        <Link to="/ciclobasico" className='nav__links' onClick={closeMenu}>CICLO BÁSICO</Link>
-                        <Link to="/cicloesoterico" className='nav__links' onClick={closeMenu}>CICLO ESÓTERICO</Link>
-                        <Link to="/ciclodiversificado" className='nav__links' onClick={closeMenu}>CICLO DIVERSIFICADO</Link>
-                        <Link to="/ciclometafisica-cristiana" className='nav__links' onClick={closeMenu}>CICLO METAFÍSICA CRISTIANA</Link>
-
+                        <Link to="/libros" className='nav__links' onClick={closeMenu}>LIBROS</Link>
+                        
                     </div>
 
 
@@ -76,19 +74,14 @@ const Menu = () => {
                         <Link to='/'>
                             <Img
                                 className="header__desktop--logo--image"
-                                src='https://static.wixstatic.com/media/a5d133_9c07b552e80148bcbac31c97c763d9eb~mv2.jpg/v1/fit/w_960%2Ch_960%2Cal_c%2Cq_80/file.jpg'
+                                src= {Logo}
                                 alt="REACT COOL IMG"
                             />
                         </Link>
 
 
                     </div>
-                    <div className="nav__desktop--container">
-                        <Link to="/ciclobasico" className='nav__links nav__links--desktop'>CICLO BÁSICO</Link>
-                        <Link to="/cicloesoterico" className='nav__links nav__links--desktop' >CICLO ESÓTERICO</Link>
-                        <Link to="/ciclodiversificado" className='nav__links nav__links--desktop' >CICLO DIVERSIFICADO</Link>
-                        <Link to="/ciclometafisica-cristiana" className='nav__links nav__links--desktop' >CICLO METAFÍSICA CRISTIANA</Link>
-                    </div>
+
                 </nav>
             </header>
 

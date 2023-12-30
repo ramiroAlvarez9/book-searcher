@@ -1,6 +1,5 @@
 .header__desktop--logo{
     display:none;
-
 }
 .nav {
     .nav__icon--menuButton {
@@ -66,7 +65,7 @@
         transform: translateX(-110%);
     }
     .nav__desktop {
-        border-bottom: solid 0.5px yellow;
+        border-bottom: solid 0.5px #d6d600;
         height: 16vh;
         display: flex;
         align-items: center;
@@ -84,6 +83,7 @@
                 margin-left:-36.0px;
                 width: 100px;
                 height: 100px;
+                border-radius: 50%;
 
             }
         }
@@ -91,8 +91,9 @@
             width: 50.1vw;
             display: inherit;
             align-items: flex-end;
-            justify-content: flex-end;
-            margin-left: 2.7vw
+            justify-content: flex-start;
+            margin-left: 2.7vw;
+            
         }
     }
     .nav__links {

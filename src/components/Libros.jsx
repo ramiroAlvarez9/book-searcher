@@ -8,7 +8,7 @@ import Img from "react-cool-img";
 
 
 
-const CicloBasicoLibros = () => {
+const Libros = () => {
 
     //data to hide or show the book info
     const [dynamicShowingBook, setDynamicShowingBook] = useState('-110%');
@@ -16,7 +16,6 @@ const CicloBasicoLibros = () => {
     const [booksData, setBooksData] = useState([]);
     //data for 'VER MAS'
     const [booksDataKey, setBooksDataKey] = useState(0);
-
 
     //data from the input
     const [searchTerm, setSearchTerm] = useState('');
@@ -33,13 +32,7 @@ const CicloBasicoLibros = () => {
         setBooksData(books.data)
     };
 
-    useEffect(() => {
-
-        fetchTheBookApi();
-
-
-
-    }, []);
+    useEffect(  () =>  fetchTheBookApi() , []);
 
     return (
 
@@ -172,4 +165,4 @@ const CicloBasicoLibros = () => {
     );
 }
 
-export default CicloBasicoLibros;
+export default Libros;
