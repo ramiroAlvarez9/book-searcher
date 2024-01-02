@@ -1,10 +1,10 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-import '../assets/styles/ver-mas.scss';
+import '../assets/styles/global.scss';
+
 
 
 const VerMas = ({ dynamicShowingBook, dynamicHiddingBook, titulo, autor, imagen, sinopsis}) => {
-    //console.log(titulo)
 
     return (
 
@@ -30,9 +30,6 @@ const VerMas = ({ dynamicShowingBook, dynamicHiddingBook, titulo, autor, imagen,
                         <h3 className="section__gallery--showing--the--book--sub--title">{autor}</h3>
                         <div id='buttons'>
                             <button type="button">COMPRAR EDICIÓN DIGITAL</button>
-                            <button type="button">VER EN YOUTUBE</button>
-                            <button type="button">COMPRAR EDICIÓN FÍSICA</button>
-                            <button type="button">VER EDITORIAL</button>
                         </div>
                     </div>
                 </div>

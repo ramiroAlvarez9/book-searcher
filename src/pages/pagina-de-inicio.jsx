@@ -4,7 +4,8 @@ import WelcomePageDesktop from '../components/Pagina-de-inicio-escritorio';
 
 const WelcomePage = () => {
     return (
-        <>
+        <>  
+        
             <WelcomePageMobile />
             <WelcomePageDesktop />
         </>

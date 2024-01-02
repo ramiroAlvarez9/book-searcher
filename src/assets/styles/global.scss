@@ -1,0 +1,484 @@
+@import './varibles.scss';
+
+// ---------- MENU COMPONENT ---------- //
+
+
+.header__desktop--logo {
+    display: none;
+}
+
+.nav {
+    .nav__icon--menuButton {
+        margin: 4.84% 0 0 7.5%;
+    }
+
+    .nav__unfolded--icon {
+        margin: 4.84% 0 0 7.5%;
+    }
+
+    /* unfolded div menu*/
+    .nav__unfolded {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        height: 100%;
+        width: 100vw;
+        background-color: $background;
+        transform: translate(-100%);
+        transition-duration: 0.4s;
+
+        .nav__unfolded--text--logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Oswald", sans-serif;
+            color: $primary;
+            height: 91px;
+        }
+
+        .nav__unfolded--text--logo--img {
+            display: block;
+            margin-bottom: 2vh;
+
+        }
+
+        .nav__unfolded--text--logo--h2 {
+            margin-bottom: 2vh;
+
+        }
+
+    }
+}
+
+/*hide the nav for desktop display*/
+.nav__links--desktop {
+    position: absolute;
+    transform: translateX(-110%);
+}
+
+@media (min-width: 1200px) {
+    .nav {
+        position: absolute;
+        transform: translateX(-110%);
+    }
+
+    .nav__desktop {
+        border-bottom: solid 0.5px $secondary;
+        height: 16vh;
+        display: flex;
+        align-items: center;
+
+        .header__desktop--logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100%;
+            padding-left: 2.1vw;
+
+            .header__desktop--logo--image {
+                margin-left: -36.0px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .nav__desktop--container {
+            width: 50.1vw;
+            display: inherit;
+            align-items: flex-end;
+            justify-content: flex-start;
+            margin-left: 2.7vw;
+
+        }
+    }
+
+    .nav__links {
+        font-family: "Raleway", sans-serif;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: 700;
+
+    }
+
+    .nav__links--desktop {
+        position: relative;
+        transform: translateX(0);
+    }
+}
+
+// ---------- END MENU COMPONENT ---------- //
+
+// ---------- LIBROS COMPONENT ---------- //
+#basicCicleBooks {
+    width: 100vw;
+   //margin-top: 5vh;
+
+    .searchBar_container{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin-left: 10%
+        
+    }
+
+    .section__buttons {
+        button[type="button"] {
+            width: 55%;
+            height: 100%;
+            font-size: 5px;
+            margin-right: 3px;
+            background-color: $background;
+            border: solid 1px $primary;
+            border-radius: 2px;
+            color: $primary;
+            font-weight: 700;
+        }
+        display: flex;
+        margin-top: 1.56%;
+        width: 70%;
+        height: 4vh;
+    }
+    .section__gallery {
+        
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20%;
+        margin-top: 5%;
+
+        img[alt="loading screen"] {
+            grid-column: 2/3;
+        }
+        .section__gallery--container {
+            margin-top: 20.1%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border: solid 0.5px $books-borders;
+
+            .section__gallery--container--img {
+                width: 37.83vw;
+                height: 23.25vh;
+                max-width:111px;
+                max-height: 168px;
+                border-radius: 27px;
+            }
+            .section__gallery--container--title {
+                font-family: "Raleway", sans-serif;
+                font-size: 2vw;
+                color: $primary;
+                margin-top: 10px;
+                text-transform: uppercase;
+            }
+            .section__gallery--container--link {
+                font-family: "Oswald", sans-serif;
+                font-size: 5px;
+                color: $primary;
+                text-decoration: none;
+                font-weight: 900;
+                font-size: 9px;
+                margin-top: 7px;
+            }
+        }
+        .section__gallery--showing--the--book {
+            background-color: $background;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    #basicCicleBooks {
+        .section__gallery {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            row-gap: 0%;
+            .section__gallery--container {
+                width: 100%;
+                .section__gallery--container--title {
+                    font-size: 0.6vw;
+                    margin-top: 3%;
+                }
+                .section__gallery--container--link {
+                    margin-top: 3%;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+// ---------- END LIBROS COMPONENT ---------- //
+
+// ---------- PAGINA-INICIO COMPONENT ---------- //
+
+
+#section__desktop {
+    transform: translateX(-110%);
+}
+
+.footer {
+    transform: translateX(-110%);
+}
+
+.title {
+    font-family: "Oswald", sans-serif;
+    margin: 22.02% 0 0 8.02%;
+    font-size: 38px;
+    color: $primary;
+    width: 250px;
+}
+
+#section__mobile {
+    margin-left: 9.5vw;
+    margin-top: 9.22vh;
+    width: 65vw;
+
+    //border: solid 0.5px black;
+    .title__mobile {
+        font-family: "Oswald", sans-serif;
+        color: $primary;
+        font-size: 40px;
+    }
+
+    .title__mobile--p {
+        font-family: "Raleway", sans-serif;
+        color: $primary;
+        font-size: 15vw;
+        margin-top: 15px;
+        font-weight: 500;
+    }
+
+    .title__mobile--button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 0.5px $secondary;
+        font-family: "Oswald", sans-serif;
+        margin-top: 3vh;
+        width: 40vw;
+        height: 5vh;
+        font-size: 4vw;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    #section__mobile {
+        position: absolute;
+        transform: translateX(-999%);
+    }
+
+    #section__desktop {
+        transform: translateX(0%);
+        width: 100vw;
+        height: 100vh;
+        margin-top: 13.67vh
+
+    }
+
+    /*title mobile*/
+    .title {
+        display: none;
+    }
+
+    .title__desktop {
+        font-family: "Oswald", sans-serif;
+        font-size: 100px;
+        color: $primary;
+        margin-left: -6px;
+        margin-bottom: 6.12vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title__desktop--p {
+        font-family: "Raleway", sans-serif;
+        font-size: 30px;
+        color: $primary;
+        display: flex;
+        justify-content: center;
+    }
+
+    .button__container {
+        display: flex;
+        justify-content: center;
+
+        .title__desktop--button {
+            font-family: "Oswald", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-top: 6.12vh;
+            width: 290px;
+            height: 45px;
+            background-color: white;
+            border: solid 0.5px $secondary;
+            color: $primary;
+
+        }
+    }
+
+    .footer {
+        transform: translateX(0%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 23.44vh;
+        width: 100vw;
+
+        margin-top: 30.44vh;
+
+        .footer__socialNetworks--container--icons {
+            margin-right: 0.5vw;
+        }
+    }
+}
+
+
+// ---------- END PAGINA-INICIO COMPONENT ---------- //
+
+// ---------- VER-MAS COMPONENT ---------- //
+
+.section__gallery--showing--the--book {
+    position: fixed;
+    top: -0.83%;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+
+
+    .section__gallery--showing--the--book--container {
+        margin-top: 7.5%;
+        margin-left: 9.1%;
+        margin-bottom: 0%;
+        display: inherit;
+        flex-direction: row;
+        height: 40vh;
+        max-width: 1516px;
+        
+
+        .section__gallery--showing--the--book--img {
+            width: 111px;
+            height: 168px;
+            border-radius: 27px;
+            //max-width: 153px;
+        }
+        .section__gallery--showing--the--book--container--img--buttons-titles {
+            width: 90vw;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50%;
+            gap: 0% 0%;
+            grid-template-areas: ". .";
+            margin-top: 7.5%;
+            max-width: 594px;
+
+            #buttons {
+                display: grid;
+                grid-auto-columns: 1fr;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 50% 50%;
+                gap: 0% 1%;
+                grid-template-areas:
+                    ". ."
+                    ". .";
+                margin-top: 7.5%;
+                max-width: 1000px;
+                //margin-left: 5%;
+
+                button[type="button"] {
+                    background-color: white;
+                    font-size: 1.0vh;
+                    border: solid 0.5px $primary;
+                    border-radius: 2px;
+                    margin: 7.5% 10% 0 0;
+                    width: 18vw;
+                    color: $primary;
+                    font-weight: 700;
+                }
+            }
+
+            .section__gallery--showing--the--book--container--titles {
+                width: 40vw;
+                height: 40vh;
+            }
+        }
+    }
+
+    .section__gallery--showing--the--book--sub--synopsys--container {
+        border-top: solid 0.5px yellow;
+        margin-top: 10%;
+        margin-left: 9.1%;
+    }
+    .section__gallery--showing--the--book--title {
+        font-family: "Oswald", sans-serif;
+        margin-bottom: 10%;
+        font-size: 18px;
+        width: 50vw;
+        color: $primary;
+    }
+    .section__gallery--showing--the--book--sub--title {
+        font-family: "Oswald", sans-serif;
+        font-size: 14px;
+        color: $primary;
+    }
+    .section__gallery--showing--the--book--sub--synopsys--container--h4 {
+        font-family: "Oswald", sans-serif;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        color: $primary;
+    }
+    .section__gallery--showing--the--book--sub--synopsys--container--p {
+        font-family: "Raleway", sans-serif;
+        color: $primary;
+        font-weight: 500;
+        width: 70vw;
+    }
+}
+@media (min-width: 768px) {
+    .section__gallery--showing--the--book {
+        .section__gallery--showing--the--book--sub--synopsys--container {
+            margin-top: -5%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .section__gallery--showing--the--book {
+
+        .section__gallery--showing--the--book--title {
+            font-size: 32px;
+        }
+
+        .section__gallery--showing--the--book--sub--title {
+            font-size: 16px;
+        }
+        .section__gallery--showing--the--book--sub--synopsys--container {
+            margin-top: 15%;
+        }
+    }
+
+    .section__gallery--showing--the--book--sub--synopsys--container--h4 {
+        font-size: 2vw;
+    }
+    .section__gallery--showing--the--book--sub--synopsys--container--p {
+        font-size: 2vw;
+    }
+}
+
+
+// ---------- END VER-MAS COMPONENT ---------- //

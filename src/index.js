@@ -4,15 +4,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import { UserContextProvider } from './app-context/colors-context-provider'
-
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <UserContextProvider>
         <App />
-      </UserContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
