@@ -49,7 +49,7 @@ const Libros = () => {
             label="Buscar por titulo"
             variant="standard"
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{ width: "50%" , marginLeft: '1%'}}
+            style={{ width: "90%" , marginLeft: '1%'}}
           />
         </div>
 
@@ -81,13 +81,15 @@ const Libros = () => {
                   if (val.id === parseInt(booksDataKey)) {
                     return (
                       <>
-                        <div className="section__gallery--container">
+                        <div className="section__gallery--container" key={key} >
                           <Link
+                            key={key}
                             className="section__gallery--container--link"
                             to=""
                             onClick={() => setBooksDataKey(`${val.id}`)}
                           >
                             <Img
+                              key={key}
                               onClick={showTheBooks}
                               className="section__gallery--container--img"
                               src={val.attributes.imagen}
@@ -95,7 +97,7 @@ const Libros = () => {
                             />
                           </Link>
 
-                          <h3 className="section__gallery--container--title">
+                          <h3 className="section__gallery--container--title" key={key}>
                             {val.attributes.titulo}
                           </h3>
 

@@ -1,10 +1,18 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import '../assets/styles/global.scss';
+import { Button } from '@mui/material';
 
 
 
 const VerMas = ({ dynamicShowingBook, dynamicHiddingBook, titulo, autor, imagen, sinopsis}) => {
+    /* 
+    
+        <h2 className="section__gallery--showing--the--book--title">{titulo}</h2>
+        <h3 className="section__gallery--showing--the--book--sub--title">{autor}</h3>
+    
+    
+    */
 
     return (
 
@@ -16,20 +24,20 @@ const VerMas = ({ dynamicShowingBook, dynamicHiddingBook, titulo, autor, imagen,
 
             <div className="section__gallery--showing--the--book--container">
                
-                <Icon icon="ant-design:close-square-filled" color="#0f0333" width="56" height="50" className='section__gallery--showing--the--book--icon'
-
-                onClick = {dynamicHiddingBook}
                 
-                
-                />
 
                 <div className='section__gallery--showing--the--book--container--img--buttons-titles'>
+                <div className='button__container'>
+                <Button 
+                    size='small'
+                    onClick = {dynamicHiddingBook}
+
+                >Volver a la busqueda</Button>
+                </div>
                     <img className="section__gallery--showing--the--book--img" src={imagen} alt="pilares" />
-                    <div className='section__gallery--showing--the--book--container--titles'>
-                        <h2 className="section__gallery--showing--the--book--title">{titulo}</h2>
-                        <h3 className="section__gallery--showing--the--book--sub--title">{autor}</h3>
+                    <div className='section__gallery--showing--the--book--container--titles'>   
                         <div id='buttons'>
-                            <button type="button">COMPRAR EDICIÓN DIGITAL</button>
+                            <Button variant="outlined" size = 'small' >COMPRAR EDICIÓN DIGITAL</Button>
                         </div>
                     </div>
                 </div>
