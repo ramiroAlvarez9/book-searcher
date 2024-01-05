@@ -2,6 +2,7 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import '../assets/styles/global.scss';
 import { Button } from '@mui/material';
+import KeyboardDoubleArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftOutlined';
 
 
 
@@ -30,14 +31,16 @@ const VerMas = ({ dynamicShowingBook, dynamicHiddingBook, titulo, autor, imagen,
                 <div className='button__container'>
                 <Button 
                     size='small'
+                    style={{fontSize: '10px'}}
                     onClick = {dynamicHiddingBook}
+                    startIcon = { < KeyboardDoubleArrowLeftOutlinedIcon /> }
 
                 >Volver a la busqueda</Button>
                 </div>
                     <img className="section__gallery--showing--the--book--img" src={imagen} alt="pilares" />
                     <div className='section__gallery--showing--the--book--container--titles'>   
                         <div id='buttons'>
-                            <Button variant="outlined" size = 'small' >COMPRAR EDICIÓN DIGITAL</Button>
+                            <Button variant="outlined" size = 'small' >COMPRAR </Button>
                         </div>
                     </div>
                 </div>
@@ -45,8 +48,8 @@ const VerMas = ({ dynamicShowingBook, dynamicHiddingBook, titulo, autor, imagen,
 
             <div className="section__gallery--showing--the--book--sub--synopsys--container">
 
-                <h4 className="section__gallery--showing--the--book--sub--synopsys--container--h4">{titulo}</h4>
-                <p className="section__gallery--showing--the--book--sub--synopsys--container--p">{sinopsis}</p>
+                <h4 className="section__gallery--showing--the--book--sub--synopsys--container--h4">{titulo} </h4>
+                <p className="section__gallery--showing--the--book--sub--synopsys--container--p">  {sinopsis} </p>
 
             </div>
 

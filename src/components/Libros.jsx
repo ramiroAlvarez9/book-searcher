@@ -6,6 +6,7 @@ import Img from "react-cool-img";
 import "../assets/styles/global.scss";
 import TextField from "@mui/material/TextField";
 import Logo from '../assets/BL.png';
+import { Button } from "@mui/material";
 
 const Libros = () => {
   //data to hide or show the book info
@@ -38,8 +39,9 @@ const Libros = () => {
                 className="nav__unfolded--text--logo--img"
                 src={Logo}
                 alt="Logo"
-                width = {100}
-                height = {100}
+                width = {75}
+                height = {75}
+                style = {{borderRadius : '10px'}}
 
               />
           </div>
@@ -49,7 +51,7 @@ const Libros = () => {
             label="Buscar por titulo"
             variant="standard"
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{ width: "90%" , marginLeft: '1%'}}
+            style={{ width: "90%" , marginLeft: '3%'}}
           />
         </div>
 
@@ -106,12 +108,12 @@ const Libros = () => {
                             to=""
                             onClick={() => setBooksDataKey(`${val.id}`)}
                           >
-                            <span
+                            <Button
                               onClick={showTheBooks}
                               className="section__gallery--container--link"
                             >
                               VER MÁS
-                            </span>
+                            </Button>
                           </Link>
                         </div>
 
