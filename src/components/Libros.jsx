@@ -1,12 +1,12 @@
-import React from "react";
 import VerMas from "./Ver-mas";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Img from "react-cool-img";
 import "../assets/styles/global.scss";
 import TextField from "@mui/material/TextField";
-import Logo from '../assets/BL.png';
+import Logo from "../assets/BL.png";
 import { Button } from "@mui/material";
+import ReactLoading from "react-loading";
 
 const Libros = () => {
   //data to hide or show the book info
@@ -35,15 +35,14 @@ const Libros = () => {
       <section id="basicCicleBooks">
         <div className="searchBar_container">
           <div className="nav__unfolded--text--logo">
-              <Img
-                className="nav__unfolded--text--logo--img"
-                src={Logo}
-                alt="Logo"
-                width = {75}
-                height = {75}
-                style = {{borderRadius : '10px'}}
-
-              />
+            <Img
+              className="nav__unfolded--text--logo--img"
+              src={Logo}
+              alt="Logo"
+              width={75}
+              height={75}
+              style={{ borderRadius: "10px" }}
+            />
           </div>
 
           <TextField
@@ -51,20 +50,23 @@ const Libros = () => {
             label="Buscar por titulo"
             variant="standard"
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{ width: "90%" , marginLeft: '3%'}}
+            style={{ width: "90%", marginLeft: "3%" }}
           />
         </div>
 
         <section className="section__gallery">
           {
             //if the data is not available
+
             booksData === undefined ? (
-              <>
-                <img
-                  src="https://c.tenor.com/Tu0MCmJ4TJUAAAAC/load-loading.gif"
-                  alt="loading screen"
+              <div className="loading__image">
+                <ReactLoading
+                  type={"spinningBubbles"}
+                  color={"#000000"}
+                  height={667}
+                  width={375}
                 />
-              </>
+              </div>
             ) : (
               //when the data it's available
               booksData
@@ -83,7 +85,7 @@ const Libros = () => {
                   if (val.id === parseInt(booksDataKey)) {
                     return (
                       <>
-                        <div className="section__gallery--container" key={key} >
+                        <div className="section__gallery--container" key={key}>
                           <Link
                             key={key}
                             className="section__gallery--container--link"
@@ -99,7 +101,10 @@ const Libros = () => {
                             />
                           </Link>
 
-                          <h3 className="section__gallery--container--title" key={key}>
+                          <h3
+                            className="section__gallery--container--title"
+                            key={key}
+                          >
                             {val.attributes.titulo}
                           </h3>
 

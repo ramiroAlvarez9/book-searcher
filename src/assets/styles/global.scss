@@ -64,6 +64,9 @@
 
 
 // ---------- LIBROS COMPONENT ---------- //
+
+
+
 #basicCicleBooks {
     width: 100vw;
 
@@ -101,11 +104,13 @@
 
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 20%;
         margin-top: 5%;
-
-        img[alt="loading screen"] {
-            grid-column: 2/3;
+        .loading__image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
         }
 
         .section__gallery--container {
@@ -465,11 +470,7 @@
 
     // ---------- VER-MAS COMPONENT ---------- //
     .section__gallery--showing--the--book {
-
-   
         .section__gallery--showing--the--book--container {
- 
-
             //imagen zone
             .section__gallery--showing--the--book--container--img--buttons-titles {
                 
@@ -478,27 +479,9 @@
                     min-height: 600px;
                 }
             }
-
-            //sinopsis zone
-            .section__gallery--showing--the--book--sub--synopsys--container {
-  
-                .section__gallery--showing--the--book--sub--synopsys--container--h4 {
-                }
-
-                .section__gallery--showing--the--book--sub--title {
-
-                }
-
-                .section__gallery--showing--the--book--sub--synopsys--container--p {
-                }
-            }
         }
 
     }
 
     // ---------- END VER-MAS COMPONENT ---------- //
-
-
-
-
 }
